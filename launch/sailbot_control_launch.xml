@@ -1,5 +1,6 @@
 <launch>
   <node pkg="sailbot_test" exec="controller_input" name="controller_input" output="screen"/>
+  <node pkg="sailbot_test" exec="sailbot_gui" name="sailbot_gui" output="screen"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="sail_ros_gz_bridge" args="/main_sail_joint/cmd_pos@std_msgs/msg/Float64@gz.msgs.Double"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="rudder_ros_gz_bridge" args="/rudder_joint/cmd_pos@std_msgs/msg/Float64@gz.msgs.Double"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="anemometer_gz_ros_bridge" args="/world/waves/model/rs750/link/base_link/sensor/anemometer/anemometer@geometry_msgs/msg/Vector3@gz.msgs.Vector3d"/>

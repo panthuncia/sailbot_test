@@ -25,7 +25,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'controller_input = sailbot_test.controller_input:main'
+            'controller_input = sailbot_test.controller_input:main',
+            'sailbot_gui = sailbot_test.sailbot_gui:main',
         ],
     },
 )
