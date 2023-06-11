@@ -3,5 +3,6 @@
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="sail_ros_gz_bridge" args="/main_sail_joint/cmd_pos@std_msgs/msg/Float64@gz.msgs.Double"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="rudder_ros_gz_bridge" args="/rudder_joint/cmd_pos@std_msgs/msg/Float64@gz.msgs.Double"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="anemometer_gz_ros_bridge" args="/world/waves/model/rs750/link/base_link/sensor/anemometer/anemometer@geometry_msgs/msg/Vector3@gz.msgs.Vector3d"/>
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="navsat_gz_ros_bridge" args="/world/waves/model/rs750/link/base_link/sensor/navsat_sensor/navsat@sensor_msgs/msg/NavSatFix@gz.msgs.NavSat"/>
 </launch>
  
