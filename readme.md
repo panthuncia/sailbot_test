@@ -17,21 +17,21 @@ sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-
 
 # add everything after this to ~/.bashrc:
 
-# Source ROS distro's setup.bash
+#Source ROS distro's setup.bash
 source /opt/ros/humble/setup.bash
 export GZ_VERSION=garden
-# source ros_gz_bridge
+#source ros_gz_bridge
 source ~/ws/install/setup.bash
 
-# add models to GZ path
-export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:\
-~/gz_ws/install/asv_sim2/lib:~/gz_ws/install/gz-waves1/lib
+#add models to GZ path
+export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:\\
+\~/gz_ws/install/asv_sim2/lib:~/gz_ws/install/gz-waves1/lib
 
 export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:\
-~/gz_ws/src/rs750/rs750_gazebo/models:\
-~/gz_ws/src/rs750/rs750_gazebo/worlds:\
-~/gz_ws/src/asv_wave_sim/gz-waves-models/models:\
-~/gz_ws/src/asv_wave_sim/gz-waves-models/world_models:\
+~/gz_ws/src/rs750/rs750_gazebo/models:\\
+~/gz_ws/src/rs750/rs750_gazebo/worlds:\\
+~/gz_ws/src/asv_wave_sim/gz-waves-models/models:\\
+~/gz_ws/src/asv_wave_sim/gz-waves-models/world_models:\\
 ~/gz_ws/src/asv_wave_sim/gz-waves-models/worlds
 
 # source gz_ws
