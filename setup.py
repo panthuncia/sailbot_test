@@ -27,6 +27,7 @@ setup(
         'console_scripts': [
             'controller_input = sailbot_test.controller_input:main',
             'sailbot_gui = sailbot_test.sailbot_gui:main',
+            'compass = sailbot_test.compass:main',
         ],
     },
 )

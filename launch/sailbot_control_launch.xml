@@ -1,9 +1,12 @@
 <launch>
   <node pkg="sailbot_test" exec="controller_input" name="controller_input" output="screen"/>
   <node pkg="sailbot_test" exec="sailbot_gui" name="sailbot_gui" output="screen"/>
+  <node pkg="sailbot_test" exec="compass" name="compass" output="screen"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="sail_ros_gz_bridge" args="/main_sail_joint/cmd_pos@std_msgs/msg/Float64@gz.msgs.Double"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="rudder_ros_gz_bridge" args="/rudder_joint/cmd_pos@std_msgs/msg/Float64@gz.msgs.Double"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="anemometer_gz_ros_bridge" args="/world/waves/model/rs750/link/base_link/sensor/anemometer/anemometer@geometry_msgs/msg/Vector3@gz.msgs.Vector3d"/>
   <node pkg="ros_gz_bridge" exec="parameter_bridge" name="navsat_gz_ros_bridge" args="/world/waves/model/rs750/link/base_link/sensor/navsat_sensor/navsat@sensor_msgs/msg/NavSatFix@gz.msgs.NavSat"/>
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="model_gz_ros_bridge" args="/world/waves/model/rs750/joint_state@sensor_msgs/msg/JointState@gz.msgs.Model"/>
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" name="tf_gz_ros_bridge" args="/world/waves/dynamic_pose/info@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V"/>
 </launch>
  
