@@ -24,18 +24,12 @@ export GZ_VERSION=garden
 source ~/ws/install/setup.bash
 
 #add models to GZ path
-export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:\\
-\~/gz_ws/install/asv_sim2/lib:~/gz_ws/install/gz-waves1/lib
+export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:\~/gz_ws/install/asv_sim2/lib:\~/gz_ws/install/gz-waves1/lib
 
-export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:\
-~/gz_ws/src/rs750/rs750_gazebo/models:\\
-~/gz_ws/src/rs750/rs750_gazebo/worlds:\\
-~/gz_ws/src/asv_wave_sim/gz-waves-models/models:\\
-~/gz_ws/src/asv_wave_sim/gz-waves-models/world_models:\\
-~/gz_ws/src/asv_wave_sim/gz-waves-models/worlds
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:\~/gz_ws/src/rs750/rs750_gazebo/models:\~/gz_ws/src/rs750/rs750_gazebo/worlds:\~/gz_ws/src/asv_wave_sim/gz-waves-models/models:\~/gz_ws/src/asv_wave_sim/gz-waves-models/world_models:\~/gz_ws/src/asv_wave_sim/gz-waves-models/worlds
 
-# source gz_ws
+#source gz_ws
 source ~/gz_ws/install/setup.bash
 
-# source ros2_ws
+#source ros2_ws
 source ~/ros2_ws/install/setup.bash
