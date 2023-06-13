@@ -1,9 +1,14 @@
-import pygame
+import sys
+import math
+import subprocess
 import rclpy
 from rclpy.node import Node
-import math
 from std_msgs.msg import Float64
-
+try:
+    import pygame
+except ImportError as e:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "pygame"])
+    import pygame
 class ControllerInput(Node):
 
     def __init__(self):

@@ -1,7 +1,6 @@
 import sys
 import os
 import signal
-from PyQt6.QtCore import QObject
 import pygame
 import rclpy
 from rclpy.node import Node
@@ -404,8 +403,6 @@ class SailbotUI(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    pygame.init()
-    print("Joysticks: " + str(pygame.joystick.get_count()))
     sailbot_ui = SailbotUI()
     rclpy.spin(sailbot_ui)
     sailbot_ui.ui_proc.kill()
